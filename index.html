@@ -24,8 +24,9 @@
     <main id="root">
 
         <div class="filter-input">
-            <select name="filter" id="filter">
-                <option v-model="select" v-for="genre in genres" value="genre">{{ genre }}</option>
+            <select v-model="select" name="filter" id="filter">
+                <option value="all">All</option>
+                <option v-for="genre in genres" :value="genre">{{ genre }}</option>
             </select>
         </div>
         
