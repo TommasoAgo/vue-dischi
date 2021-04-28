@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dischi</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="img/download.png" alt="Logo">
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="root">
+        
+        <div class="cards flex">
+           
+            <!-- Card Sample -->
+        <div v-for="card in 10" class="card">
+            <div class="inner-box">
+                <div class="cd-img">
+                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                </div>
+                <div class="cd-title uppercase">
+                    <h4>New Jersey</h4>
+                </div>
+                <div artist-date>
+                    <div class="artist">Bon Jovi</div>
+                    <div class="date">1988</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main> 
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
