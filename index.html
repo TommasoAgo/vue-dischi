@@ -24,12 +24,9 @@
     <main id="root">
 
         <div class="filter-input">
-            <select @change="filterArray()" name="filter" id="filter">
-                <option value="all">All</option>
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="jazz">Jazz</option>
-                <option value="metal">Metal</option>
+            <select name="filter" id="filter">
+                <option value="all">{{selectAll}}</option>
+                <option v-for="genre in genres" value="">{{ genre }}</option>
             </select>
         </div>
         
