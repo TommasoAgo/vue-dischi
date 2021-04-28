@@ -5,7 +5,18 @@ var app = new Vue(
             music: []
         },
         methods: {
-           
+            filterArray(array, val) {
+                let filteredArray = [];
+                if( val == "all" ) {
+                    filteredArray = array;
+                } else {
+                    filteredArray = array.filter((element) => {
+                        return element.genre == val;
+                    })
+                }
+                    
+                return filteredArray;
+            }
         },
         mounted() {
             axios
