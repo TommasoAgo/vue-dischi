@@ -26,17 +26,17 @@
         <div class="cards flex">
            
             <!-- Card Sample -->
-        <div v-for="card in 10" class="card">
+        <div v-for="cd in music" class="card">
             <div class="inner-box">
                 <div class="cd-img">
-                    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                    <img :src="cd.poster">
                 </div>
                 <div class="cd-title uppercase">
-                    <h4>New Jersey</h4>
+                    <h4>{{ cd.title }}</h4>
                 </div>
                 <div artist-date>
-                    <div class="artist">Bon Jovi</div>
-                    <div class="date">1988</div>
+                    <div class="artist">{{ cd.author }}</div>
+                    <div class="date">{{ cd.year }}</div>
                 </div>
             </div>
         </div>
