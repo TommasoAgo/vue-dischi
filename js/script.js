@@ -5,7 +5,7 @@ var app = new Vue(
             music: []
         },
         methods: {
-
+           
         },
         mounted() {
             axios
