@@ -7,7 +7,6 @@ var app = new Vue(
             select: 'all'
         },
         methods: {
-          
         },
         mounted() {
             axios
