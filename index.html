@@ -33,7 +33,7 @@
         <div class="cards flex">
            
             <!-- Card Sample -->
-        <div v-for="cd in music" v-if="cd.genre == select" class="card">
+        <div v-for="cd in music" v-if="(cd.genre == select) || (select == 'all')" class="card">
             <div class="inner-box">
                 <div class="cd-img">
                     <img :src="cd.poster">

@@ -4,7 +4,7 @@ var app = new Vue(
         data: {
             music: [],
             genres : [],
-            select: ''
+            select: 'all'
         },
         methods: {
           
@@ -20,20 +20,12 @@ var app = new Vue(
                         return a.year - b.year;
                     });
 
-                    this.music.forEach((item, index) => {
+                    this.music.forEach((item) => {
                         if( !this.genres.includes(item.genre) ) {
                             this.genres.push(item.genre);
                         }
                         
                     });
-
-                    console.log(this.select);
-
-                    // problema 1 : sono duplicato
-                    // poi : come faccio a stampare in html dentro la select i valori di questi generi?
-
-                    // come faccio a sapere qua è il genere selezionato? v-model
-
                 })
         }
     }
