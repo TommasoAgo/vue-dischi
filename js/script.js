@@ -4,23 +4,10 @@ var app = new Vue(
         data: {
             music: [],
             genres : [],
-            selectAll: 'All'
+            select: ''
         },
         methods: {
-            /*
-            filterArray(array, val) {
-                let filteredArray = [];
-                if( val == "all" ) {
-                    filteredArray = array;
-                } else {
-                    filteredArray = array.filter((element) => {
-                        return element.genre == val;
-                    })
-                }
-                    
-                return filteredArray;
-            }
-            */
+          
         },
         mounted() {
             axios
@@ -33,8 +20,6 @@ var app = new Vue(
                         return a.year - b.year;
                     });
 
-                    console.log(this.music);
-
                     this.music.forEach((item, index) => {
                         if( !this.genres.includes(item.genre) ) {
                             this.genres.push(item.genre);
@@ -42,7 +27,7 @@ var app = new Vue(
                         
                     });
 
-                    console.log(this.genres);
+                    console.log(this.select);
 
                     // problema 1 : sono duplicato
                     // poi : come faccio a stampare in html dentro la select i valori di questi generi?
